@@ -1,0 +1,106 @@
+body { 
+  font-family: sans-serif; 
+  margin: 0; 
+  background: #111827; 
+  color: #e5e7eb; 
+}
+
+.wrap { 
+  max-width: 1300px; 
+  margin: 0 auto; 
+  padding: 16px; 
+}
+
+.grid { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  gap: 16px; 
+}
+
+.card { 
+  background: #1f2937; 
+  border-radius: 10px; 
+  padding: 12px; 
+}
+
+button, input, select { 
+  background: #374151; 
+  color: #e5e7eb; 
+  border: 1px solid #4b5563; 
+  border-radius: 6px; 
+  padding: 6px 10px; 
+}
+
+button { 
+  cursor: pointer; 
+}
+
+pre { 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  font-size: 12px; 
+}
+
+img { 
+  width: 100%; 
+  border-radius: 8px; 
+}
+
+.row { 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap; 
+  align-items: center; 
+}
+
+.collapsible {
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 8px;
+  background: #111827;
+}
+
+.collapsible summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #d1d5db;
+  user-select: none;
+}
+
+.toast-host {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 220px;
+  max-width: 360px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  color: #f9fafb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toast.success {
+  background: #14532d;
+  border-color: #22c55e;
+}
+
+.toast.error {
+  background: #7f1d1d;
+  border-color: #ef4444;
+}
+
+.toast.hide {
+  opacity: 0;
+  transform: translateY(-4px);
+}

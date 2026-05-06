@@ -1,0 +1,11 @@
+gpiozero
+picamera2
+rpi-ws281x
+spidev
+numpy
+opencv-python-headless
+rpi-hardware-pwm
+evdev
+fastapi
+uvicorn
+uvicorn[standard]

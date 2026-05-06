@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tank AV Control</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h2>Tank AV Local Interface</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="row" style="margin-bottom:8px;">
+        </div>
+        <img id="video1" src="/video/mjpeg" alt="video stream" />
+      </div>
+      <div class="card">
+        <div class="row">
+          <input id="clientId" placeholder="client id" value="web-local" />
+          <button onclick="acquire()">Acquire</button>
+          <button onclick="releaseCtrl()">Release</button>
+        </div>
+        <details class="collapsible" style="margin-top:8px;" open>
+          <summary>Mode and Drive Controls</summary>
+          <div class="row" style="margin-top:8px;">
+            <select id="modeSel">
+              <option value="idle">idle</option>
+              <option value="manual">manual</option>
+              <option value="line_follow">line_follow</option>
+              <option value="obstacle_avoid">obstacle_avoid</option>
+              <option value="safe_stop">safe_stop</option>
+            </select>
+            <button onclick="setMode()">Set Mode</button>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <input id="left" type="number" value="0" />
+            <input id="right" type="number" value="0" />
+            <button onclick="drive()">Drive</button>
+            <button onclick="stopNow()">Stop</button>
+          </div>
+        </details>
+        <div class="row" style="margin-top:8px;">
+          <button onclick="connectDualSense()">Connect DualSense</button>
+          <button onclick="reloadPipelineConfig()">Reload Pipeline Config</button>
+        </div>
+        <div style="margin-top:10px;">
+          <div class="row" style="margin-bottom:8px;">
+            <strong>Stream</strong>
+            <select id="feedSel">
+              <option value="telemetry">telemetry</option>
+              <option value="all">pipeline: all</option>
+              <option value="perception">pipeline: perception</option>
+              <option value="world">pipeline: world</option>
+              <option value="planner">pipeline: planner</option>
+              <option value="manual">pipeline: manual</option>
+              <option value="control">pipeline: control</option>
+            </select>
+          </div>
+          <strong>State</strong>
+          <pre id="state">waiting...</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="/static/app1.js"></script>
+
+</html>

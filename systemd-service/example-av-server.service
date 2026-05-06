@@ -1,0 +1,23 @@
+[Unit]
+Description=My FastAPI App (Uvicorn)
+After=network.target
+
+[Service]
+User=your_user
+Group=your_user
+WorkingDirectory=/path/to/your/project
+
+# If using venv
+Environment="PATH=/path/to/your/venv/bin"
+
+ExecStart=/path/to/your/venv/bin/uvicorn backend.app:app --host 0.0.0.0 --port 8080
+
+Restart=always
+RestartSec=3
+
+# Optional but useful
+KillSignal=SIGINT
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

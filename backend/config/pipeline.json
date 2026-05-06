@@ -1,0 +1,43 @@
+{
+    "obstacle_threshold_cm": 39.0,
+    "max_sensor_age_s": 0.25,
+
+    "obstacle_turn_distance_factor": 0.39,
+    "obstacle_forward_distance_cm": 7.0,
+    "obstacle_forward_distance_2_cm": 10.0,
+    "obstacle_turn_speed": 0.35,
+    "obstacle_turn_slow_speed": 0.32,
+    "obstacle_forward_speed": 0.29,
+    "obstacle_forward_slow_speed": 0.25,
+    "obstacle_forward_redetect_hold_s": 0.25,
+    "obstacle_slowdown_ratio": 0.8,
+
+    "adaptive_speed": false,
+    "cruise_speed": 26.0,
+
+    "speed_kp": 0.019,
+    "speed_ki": 0.0005,
+    "speed_kd": 0.00002,
+
+    "max_pwm": 4096,
+    "min_pwm": 0,
+
+    "line_kp": 2.5,
+    "line_angle_kp": 1.0,
+    "line_curvature_speed_gain": 20.0,
+    "line_min_speed_factor": 0.45,
+    "min_confidence": 0.35,
+    "line_threshold": 100.0,
+
+    "obstacle_far_roi_ratio": 0.35,
+    "obstacle_min_area_px": 200.0,
+    "obstacle_px_per_cm": 8.0,
+    "camera_diag_fov_deg": 75.0,
+    "obstacle_frame_width_cm": 30.0,
+    "obstacle_max_passable_width_cm": 15.0,
+    "obstacle_adaptive_speed": true,
+
+    "wheel_track": 14.0,
+    "wheel_radius": 1.25,
+    "DEBUG": false
+}
