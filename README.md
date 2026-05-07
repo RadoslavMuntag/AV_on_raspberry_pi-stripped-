@@ -18,6 +18,7 @@ The primary objective of this project is to explore and implement self-driving v
 ## Project Structure
 
 ## Repository Structure
+```
 AV_on_raspberry_pi-stripped-/
 │
 ├── backend/                    # Application backend

@@ -19,12 +19,14 @@ class DifferentialDriveController:
         self.left_pid: SpeedPIDController = SpeedPIDController(
             kp=self.cfg.speed_kp,
             ki=self.cfg.speed_ki,
-            kd=self.cfg.speed_kd
+            kd=self.cfg.speed_kd,
+            integral_limits=self.cfg.integral_limits
         )
         self.right_pid: SpeedPIDController = SpeedPIDController(
             kp=self.cfg.speed_kp,
             ki=self.cfg.speed_ki,
-            kd=self.cfg.speed_kd
+            kd=self.cfg.speed_kd,
+            integral_limits=self.cfg.integral_limits
         )
 
     def tune_pid(self, kp: float | None = None, ki: float | None = None, kd: float | None = None) -> None:

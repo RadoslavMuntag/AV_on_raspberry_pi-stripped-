@@ -70,6 +70,7 @@ class PipelineConfig:
     speed_kp: float = 0.019
     speed_ki: float = 0.001
     speed_kd: float = 0.00001
+    integral_limits: tuple[float | None, float | None] = (None, 100.0)  # limits for the integral term in the PID controller to prevent windup
 
     max_pwm: int = 4096 # maximum PWM value for motor control, in the range [0, 4096]
     min_pwm: int = 0  # minimum PWM to overcome static friction and ensure movement, in the range [0, max_pwm]
